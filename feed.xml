@@ -4,10 +4,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator>
-  <link href="https://wildfly.org//feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://wildfly.org//" rel="alternate" type="text/html" />
-  <updated>2021-03-11T13:34:44+00:00</updated>
-  <id>https://wildfly.org/</id>
+  <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2021-03-11T08:31:08-08:00</updated>
+  <id>http://localhost:4000</id>
 
   
   
@@ -16,14 +16,153 @@
 
   
     <entry>
+      <title type="html">MicroProfile Reactive Messaging in WildFly 23, and WildFly MicroProfile Reactive Specifications Feature Pack 2.0.0.Final</title>
+      <link href="http://localhost:4000/news/2021/03/11/WildFly-MicroProfile-Reactive-specifications-feature-pack-2.0/" rel="alternate" type="text/html" title="MicroProfile Reactive Messaging in WildFly 23, and WildFly MicroProfile Reactive Specifications Feature Pack 2.0.0.Final" />
+      <published>2021-03-11T04:00:00-08:00</published>
+      <updated>2021-03-11T04:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/03/11/WildFly-MicroProfile-Reactive-specifications-feature-pack%202.0</id>
+      
+      
+        <content type="html" xml:base="http://localhost:4000/news/2021/03/11/WildFly-MicroProfile-Reactive-specifications-feature-pack-2.0/">&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I am pleased to announce the 2.0.0.Final release of the MicroProfile Reactive Specifications Feature Pack for WildFly. Between
+the &lt;a href=&quot;https://www.wildfly.org/news/2020/11/05/WildFly-MicroProfile-Reactive-specifications-feature-pack-1.0/&quot;&gt;1.0.0.Final release&lt;/a&gt; and the &lt;a href=&quot;https://www.wildfly.org/news/2021/03/11/WildFly23-Final-Released/&quot;&gt;WildFly 23.0.0.Final&lt;/a&gt; release, we pulled the core of what the feature pack contained into WildFLy.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;WildFly now contains these Galleon layers which used to live in the 1.0.x stream of the feature pack:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;microprofile-reactive-messaging&lt;/code&gt; - Provides the &lt;a href=&quot;https://github.com/eclipse/microprofile-reactive-messaging/releases&quot;&gt;MicroProfile Reactive Messaging 1.0&lt;/a&gt; functionality - this is a framework for building event-driven, data streaming and event sourcing applications using CDI. The streams, or channels, can be backed by a variety of messaging technologies.&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;microprofile-reactive-messaging-kafka&lt;/code&gt; - The include the connector for Kafka in WildFly, in the  layer&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;microprofile-reactive-streams-operators&lt;/code&gt; - provides the &lt;a href=&quot;https://github.com/eclipse/microprofile-reactive-streams-operators/releases&quot;&gt;MicroProfile Reactive Streams Operators 1.0&lt;/a&gt; functionality.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The WildFly 23.0.0.Final zip available from our &lt;a href=&quot;https://www.wildfly.org/downloads/&quot;&gt;downloads&lt;/a&gt; page contains these layers, however they are not enabled by default. To enable the functionality you need to add the extensions and enable the subsystems. The simplest way is to run this &lt;a href=&quot;https://github.com/wildfly/quickstart/blob/23.0.0.Beta1/microprofile-reactive-messaging-kafka/enable-reactive-messaging.cli&quot;&gt;CLI script&lt;/a&gt;. This script is taken from a QuickStart, which you can find &lt;a href=&quot;https://github.com/wildfly/quickstart/blob/23.0.0.Beta1/microprofile-reactive-messaging-kafka/&quot;&gt;here&lt;/a&gt; to get you started.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Additionally there are sections about these subsystems in our Admin Guide (&lt;a href=&quot;https://docs.wildfly.org/23/Admin_Guide.html#MicroProfile_Reactive_Streams_Operators_SmallRye&quot;&gt;Reactive Streams Operators&lt;/a&gt;/&lt;a href=&quot;https://docs.wildfly.org/23/Admin_Guide.html#MicroProfile_Reactive_Messaging_SmallRye&quot;&gt;Reactive Messaging&lt;/a&gt;).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;the-feature-pack&quot;&gt;The Feature Pack&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As before to use the feature pack you will need to use Galleon to provision a server, as pointed out in the feature pack [README]. That README contains more details of what is contained, but in summary it contains Galleon layers to provide the following functionality:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/eclipse/microprofile-context-propagation/releases&quot;&gt;MicroProfile Context Propagation 1.0&lt;/a&gt; functionality.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Additional Reactive Messaging connectors for:&lt;/p&gt;
+&lt;div class=&quot;ulist&quot;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;AMQP&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MQTT&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We decided to remove RxJava2 support of context propagation for the feature pack since that caused some problems under the hood. RxJava2 is not a supported API for user applications in WildFly (although we use it for somem internal functionality). If you have the need to process streams, please use the MicroProfile Reactive Streams Operators API instead.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Note that the 2.0.x series of the feature pack will only work with WildFLy 23.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;For earlier WildFly versions, use the 1.0.x releases. The present latest release on that stream, 1.0.2, works with WildFLy 21 and WildFly 22.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;spec-compliance&quot;&gt;Spec compliance&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;It is worth pointing out that we&amp;#8217;re strictly staying with what version 1.0 of the MicroProfile Reactive Messaging specification provides. However, the SmallRye Reactive Messaging &lt;a href=&quot;https://github.com/smallrye/smallrye-reactive-messaging/tree/3.0.0&quot;&gt;version&lt;/a&gt; we use is used to develop the next version of the specification, which is not ready yet. If you wish to get a preview of that, the steps are to instead of compiling your application against &lt;code&gt;org.eclipse.microprofile.reactive.messaging:microprofile-reactive-messaging-api:1.0&lt;/code&gt;, compile against &lt;code&gt;io.smallrye.reactive:smallrye-reactive-messaging-api:3.0.0&lt;/code&gt;, and make sure you start the server with &lt;code&gt;-Djboss.as.reactive.messaging.experimental=true&lt;/code&gt; which will bypasss some checks and allow you to use more recent, although currently unreleased constructs such as &lt;a href=&quot;https://github.com/eclipse/microprofile-reactive-messaging/blob/2.0-RC1/api/src/main/java/org/eclipse/microprofile/reactive/messaging/Channel.java&quot;&gt;@Channel&lt;/a&gt; and &lt;a href=&quot;https://github.com/eclipse/microprofile-reactive-messaging/blob/master/api/src/main/java/org/eclipse/microprofile/reactive/messaging/Emitter.java&quot;&gt;Emitter&lt;/a&gt;. &lt;strong&gt;Note:&lt;/strong&gt; - these APIs may still change until there is a final release of the next specification version.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;what-is-coming-up&quot;&gt;What is coming up?&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Once the MicroProfile Reactive Messaging 2.0 specification is released and the other reactive specifications, MicroProfile Reactive Streams Operators and MicroProfile Context Propagation, are finalised, we will start work on integrating them into a future (as yet to be determined) WildFly version. With the current information, the feature pack then mainly becomes a place for the connectors we don&amp;#8217;t want in WildFly yet.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;feedback&quot;&gt;Feedback&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;We&amp;#8217;re keen to hear your feedback! Please raise any issues found with the feature pack at &lt;a href=&quot;https://github.com/wildfly-extras/wildfly-mp-reactive-feature-pack/issues&quot; class=&quot;bare&quot;&gt;https://github.com/wildfly-extras/wildfly-mp-reactive-feature-pack/issues&lt;/a&gt;. And for the parts in WildFly, raise issues at &lt;a href=&quot;https://issues.redhat.com&quot; class=&quot;bare&quot;&gt;https://issues.redhat.com&lt;/a&gt;, in the WFLY project (using 'MP Reactive Messaging' as the component).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+      
+
+      
+      
+      
+      
+      
+
+      <author>
+        <name>Kabir Khan</name>
+        
+        
+      </author>
+
+      
+        
+      
+
+      
+        <category term="wildfly" />
+      
+        <category term="galleon" />
+      
+        <category term="microprofile" />
+      
+        <category term="reactive" />
+      
+
+      
+        <summary type="html">I am pleased to announce the 2.0.0.Final release of the MicroProfile Reactive Specifications Feature Pack for WildFly. Between the 1.0.0.Final release and the WildFly 23.0.0.Final release, we pulled the core of what the feature pack contained into WildFLy.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">WildFly 23 is released!</title>
-      <link href="https://wildfly.org//news/2021/03/11/WildFly23-Final-Released/" rel="alternate" type="text/html" title="WildFly 23 is released!" />
-      <published>2021-03-11T00:00:00+00:00</published>
-      <updated>2021-03-11T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/03/11/WildFly23-Final-Released</id>
+      <link href="http://localhost:4000/news/2021/03/11/WildFly23-Final-Released/" rel="alternate" type="text/html" title="WildFly 23 is released!" />
+      <published>2021-03-11T00:00:00-08:00</published>
+      <updated>2021-03-11T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/03/11/WildFly23-Final-Released</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/03/11/WildFly23-Final-Released/">&lt;div id=&quot;preamble&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/03/11/WildFly23-Final-Released/">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;I&amp;#8217;m pleased to announce that the WildFly 23 Final zip is now available &lt;a href=&quot;https://wildfly.org/downloads&quot;&gt;for download&lt;/a&gt;.&lt;/p&gt;
@@ -360,13 +499,13 @@ management of secret keys and the generation of encrypted tokens for use in expr
   
     <entry>
       <title type="html">WildFly 23 Beta1&#8201;&#8212;&#8201;More Progress with MicroProfile</title>
-      <link href="https://wildfly.org//news/2021/02/24/WildFly23-Beta-Released/" rel="alternate" type="text/html" title="WildFly 23 Beta1&#8201;&#8212;&#8201;More Progress with MicroProfile" />
-      <published>2021-02-24T00:00:00+00:00</published>
-      <updated>2021-02-24T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/02/24/WildFly23-Beta-Released</id>
+      <link href="http://localhost:4000/news/2021/02/24/WildFly23-Beta-Released/" rel="alternate" type="text/html" title="WildFly 23 Beta1&#8201;&#8212;&#8201;More Progress with MicroProfile" />
+      <published>2021-02-24T00:00:00-08:00</published>
+      <updated>2021-02-24T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/02/24/WildFly23-Beta-Released</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/02/24/WildFly23-Beta-Released/">&lt;div class=&quot;paragraph&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/02/24/WildFly23-Beta-Released/">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;I&amp;#8217;m pleased to announce that the new WildFly and WildFly Preview 23.0.0.Beta1 releases are available for download at &lt;a href=&quot;https://wildfly.org/downloads&quot; class=&quot;bare&quot;&gt;https://wildfly.org/downloads&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -424,13 +563,13 @@ management of secret keys and the generation of encrypted tokens for use in expr
   
     <entry>
       <title type="html">WildFly 22.0.1 is released!</title>
-      <link href="https://wildfly.org//news/2021/02/11/WildFly2201-Released/" rel="alternate" type="text/html" title="WildFly 22.0.1 is released!" />
-      <published>2021-02-11T00:00:00+00:00</published>
-      <updated>2021-02-11T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/02/11/WildFly2201-Released</id>
+      <link href="http://localhost:4000/news/2021/02/11/WildFly2201-Released/" rel="alternate" type="text/html" title="WildFly 22.0.1 is released!" />
+      <published>2021-02-11T00:00:00-08:00</published>
+      <updated>2021-02-11T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/02/11/WildFly2201-Released</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/02/11/WildFly2201-Released/">&lt;div class=&quot;paragraph&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/02/11/WildFly2201-Released/">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;WildFly 22.0.1.Final is now available &lt;a href=&quot;https://wildfly.org/downloads&quot;&gt;for download&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -476,13 +615,13 @@ management of secret keys and the generation of encrypted tokens for use in expr
   
     <entry>
       <title type="html">WildFly Bootable JAR cluster application with JKube openshift-maven-plugin</title>
-      <link href="https://wildfly.org//news/2021/02/01/Bootable-jar-jkube-clustering-openshift/" rel="alternate" type="text/html" title="WildFly Bootable JAR cluster application with JKube openshift-maven-plugin" />
-      <published>2021-02-01T00:00:00+00:00</published>
-      <updated>2021-02-01T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/02/01/Bootable-jar-jkube-clustering-openshift</id>
+      <link href="http://localhost:4000/news/2021/02/01/Bootable-jar-jkube-clustering-openshift/" rel="alternate" type="text/html" title="WildFly Bootable JAR cluster application with JKube openshift-maven-plugin" />
+      <published>2021-02-01T00:00:00-08:00</published>
+      <updated>2021-02-01T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/02/01/Bootable-jar-jkube-clustering-openshift</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/02/01/Bootable-jar-jkube-clustering-openshift/">&lt;div class=&quot;sect1&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/02/01/Bootable-jar-jkube-clustering-openshift/">&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -1105,13 +1244,13 @@ $ curl --cookie /tmp/session.txt -XGET $(oc get route wildfly-clustering-demo -o
   
     <entry>
       <title type="html">Developping on OpenShift with WildFly bootable jar</title>
-      <link href="https://wildfly.org//news/2021/01/24/odo-bootable-jar/" rel="alternate" type="text/html" title="Developping on OpenShift with WildFly bootable jar" />
-      <published>2021-01-24T00:00:00+00:00</published>
-      <updated>2021-01-24T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/01/24/odo-bootable-jar</id>
+      <link href="http://localhost:4000/news/2021/01/24/odo-bootable-jar/" rel="alternate" type="text/html" title="Developping on OpenShift with WildFly bootable jar" />
+      <published>2021-01-24T00:00:00-08:00</published>
+      <updated>2021-01-24T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/01/24/odo-bootable-jar</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/01/24/odo-bootable-jar/">&lt;div class=&quot;paragraph&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/01/24/odo-bootable-jar/">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;With the bootable jar feature of WildFly it is now easier to build applications for the cloud. You can trim the server to reduce its footprint which makes this a perfect candidate to build microservices on the cloud. Let&amp;#8217;s discover how to combine this feature to build and deploy applications on OpenShift.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;sect1&quot;&gt;
@@ -1464,8 +1603,8 @@ All the more so as you can add several containers on your pod. In the sample dev
     <entry>
       <title type="html">Planned Security Features for WildFly</title>
       <link href="https://wildfly-security.github.io/wildfly-elytron/blog/planned-security-features-for-wildfly-23/" rel="alternate" type="text/html" title="Planned Security Features for WildFly" />
-      <published>2021-01-22T00:00:00+00:00</published>
-      <updated>2021-01-22T00:00:00+00:00</updated>
+      <published>2021-01-22T00:00:00-08:00</published>
+      <updated>2021-01-22T00:00:00-08:00</updated>
       <id>https://wildfly-security.github.io/wildfly-elytron/blog/planned-security-features-for-wildfly-23/</id>
       
       
@@ -1502,13 +1641,13 @@ All the more so as you can add several containers on your pod. In the sample dev
   
     <entry>
       <title type="html">WildFly Bootable JAR 3.0 is released!</title>
-      <link href="https://wildfly.org//news/2021/01/15/bootable-jar-3.0.Final-Released/" rel="alternate" type="text/html" title="WildFly Bootable JAR 3.0 is released!" />
-      <published>2021-01-15T00:00:00+00:00</published>
-      <updated>2021-01-15T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/01/15/bootable-jar-3.0.Final-Released</id>
+      <link href="http://localhost:4000/news/2021/01/15/bootable-jar-3.0.Final-Released/" rel="alternate" type="text/html" title="WildFly Bootable JAR 3.0 is released!" />
+      <published>2021-01-15T00:00:00-08:00</published>
+      <updated>2021-01-15T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/01/15/bootable-jar-3.0.Final-Released</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/01/15/bootable-jar-3.0.Final-Released/">&lt;div class=&quot;paragraph&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/01/15/bootable-jar-3.0.Final-Released/">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;The version 3.0 of the &lt;a href=&quot;https://github.com/wildfly-extras/wildfly-jar-maven-plugin/&quot;&gt;WildFly Bootable JAR Maven plugin&lt;/a&gt; has been released.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -1669,8 +1808,8 @@ feel free to &lt;a href=&quot;https://github.com/wildfly-extras/wildfly-jar-mave
     <entry>
       <title type="html">Using case principal transformers in Elytron</title>
       <link href="https://wildfly-security.github.io/wildfly-elytron/blog/case-principal-transformer/" rel="alternate" type="text/html" title="Using case principal transformers in Elytron" />
-      <published>2021-01-14T00:00:00+00:00</published>
-      <updated>2021-01-14T00:00:00+00:00</updated>
+      <published>2021-01-14T00:00:00-08:00</published>
+      <updated>2021-01-14T00:00:00-08:00</updated>
       <id>https://wildfly-security.github.io/wildfly-elytron/blog/case-principal-transformer/</id>
       
       
@@ -1707,13 +1846,13 @@ feel free to &lt;a href=&quot;https://github.com/wildfly-extras/wildfly-jar-mave
   
     <entry>
       <title type="html">How to properly stop batch processing job and step in WildFly</title>
-      <link href="https://wildfly.org//news/2021/01/14/batch-processing-stop-job-step/" rel="alternate" type="text/html" title="How to properly stop batch processing job and step in WildFly" />
-      <published>2021-01-14T00:00:00+00:00</published>
-      <updated>2021-01-14T00:00:00+00:00</updated>
-      <id>https://wildfly.org//news/2021/01/14/batch-processing-stop-job-step</id>
+      <link href="http://localhost:4000/news/2021/01/14/batch-processing-stop-job-step/" rel="alternate" type="text/html" title="How to properly stop batch processing job and step in WildFly" />
+      <published>2021-01-14T00:00:00-08:00</published>
+      <updated>2021-01-14T00:00:00-08:00</updated>
+      <id>http://localhost:4000/news/2021/01/14/batch-processing-stop-job-step</id>
       
       
-        <content type="html" xml:base="https://wildfly.org//news/2021/01/14/batch-processing-stop-job-step/">&lt;div class=&quot;paragraph&quot;&gt;
+        <content type="html" xml:base="http://localhost:4000/news/2021/01/14/batch-processing-stop-job-step/">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Batch jobs are long-running background processing tasks, and therefore it&amp;#8217;s
 common that user may need to pause or stop the execution.  WildFly, which
 implements batch processing through its jberet component based on JSR 352
@@ -2006,45 +2145,6 @@ it does not support restart. Care should be taken to avoid data loss and data co
 
       
         <summary type="html">Batch jobs are long-running background processing tasks, and therefore it&amp;#8217;s common that user may need to pause or stop the execution. WildFly, which implements batch processing through its jberet component based on JSR 352 and Jakarta Batch Specification, offers a variety of ways to achieve that requirement. This post will demonstrate how to stop a running job execution, or individual step execution, and some design and implementation consideration.</summary>
-      
-
-      
-      
-    </entry>
-  
-    <entry>
-      <title type="html">Automatic Self-Signed Certificate Generation with Elytron</title>
-      <link href="https://wildfly-security.github.io/wildfly-elytron/blog/auto-self-signed-certificate-generation/" rel="alternate" type="text/html" title="Automatic Self-Signed Certificate Generation with Elytron" />
-      <published>2021-01-14T00:00:00+00:00</published>
-      <updated>2021-01-14T00:00:00+00:00</updated>
-      <id>https://wildfly-security.github.io/wildfly-elytron/blog/auto-self-signed-certificate-generation/</id>
-      
-      
-        <content type="html" xml:base="https://wildfly-security.github.io/wildfly-elytron/blog/auto-self-signed-certificate-generation/"></content>
-      
-
-      
-      
-      
-      
-      
-
-      <author>
-        <name>Farah Juma</name>
-        
-        
-      </author>
-
-      
-        
-      
-
-      
-        <category term="elytron" />
-      
-        <category term="wildfly" />
-      
-
       
 
       
