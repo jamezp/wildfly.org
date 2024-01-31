@@ -43,7 +43,7 @@
     }
   }
 
-  .c-from, .c-to {
+  .c-from, .c-to, .c-tz {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 2rem;
@@ -105,4 +105,12 @@
       order: 1;
     }
   }
+}
+
+:popover-open {
+  position: sticky;
+  inset: unset;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
 }

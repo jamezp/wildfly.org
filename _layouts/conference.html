@@ -12,7 +12,7 @@ layout: base
     <h2>What you need to kow</h2>
     <dl class="c-when-and-where">
       <dt>Date</dt>
-      <dd>Wednesday, March 6, 2024</dd>
+      <dd id="conf-date">Wednesday, March 6, 2024</dd>
       <dt>Time</dt>
       <dd>14:00 - 18:00 UTC</dd>
       <dt>Location</dt>
@@ -33,7 +33,7 @@ layout: base
         {%- if session.abstract -%}c-session{%- else -%}c-session c-session-gray{%- endif -%}
       {%- endcapture -%}
     <div class="{{ session_classes }}">
-      <div class="c-time"><span class="c-from">{{ session.from }}</span><span class="c-to">{{ session.to }}</span></div>
+      <div class="c-time"><span class="c-from">{{ session.from }}</span><span class="c-to">{{ session.to }}</span> <span class="c-tz">UTC</span></div>
       <div class="c-session-content">
         <div class="c-title">{{ session.title}}</div>
           {% if session.abstract %}
@@ -65,3 +65,4 @@ layout: base
 
   </div>
 </div>
+<script type="text/javascript" src="{{ '/assets/javascript/conference.js' | relative_url }}"></script>
